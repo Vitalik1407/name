@@ -1,0 +1,50 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    // Назва pc
+    string compName = "Lenovo IdeaPad3 15ALC6";
+    // Номер моделі
+    unsigned int ModelID = 1515387329;
+    // Серійний код ноутбука
+    unsigned short int versionCode = 155383725;
+    // Вік ноутбука
+    unsigned short int copmYears = 3;
+    // Працює?
+    bool working = true;
+    // Відеокарта
+    string videographic = "AMD Radeon Vega ";
+    // Процесор
+    string CPU = "AMD Ryzen 5 7500";
+    // ОЗУ
+    string OperativeMemory = "8GB";
+    // SDD
+    string SSD = "512 GB";
+    // Повна назва (секретний код)
+    int compFullName = versionCode + ModelID;
+
+    unsigned int totalMemoryInBytes =
+
+        sizeof(compFullName) +
+        sizeof(compName) +
+        sizeof(copmYears) +
+        sizeof(working) +
+        sizeof(videographic) +
+        sizeof(CPU) +
+        sizeof(OperativeMemory) +
+        sizeof(SSD);
+
+    cout << "Повна назва компютера:\t\t\t" << compFullName << endl;
+    cout << "Назва компютера:\t\t\t" << compName << endl;
+    cout << "Вік компютера:\t\t\t\t" << copmYears << endl;
+    cout << "Працює:\t\t\t\t\t" << ((working) ? "Так" : "Ні") << endl;
+    cout << "Відеокарта:\t\t\t\t" << videographic << endl;
+    cout << "Процесор:\t\t\t\t" << CPU << endl;
+    cout << "ОЗУ:\t\t\t\t\t" << OperativeMemory << endl;
+    cout << "SDD:\t\t\t\t\t" << SSD << endl;
+    cout << "Загальний об'єм використанної пам'ятi (в байтах):" <<
+
+        totalMemoryInBytes << endl;
+}
